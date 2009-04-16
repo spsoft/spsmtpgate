@@ -1,0 +1,22 @@
+                             spsmtpgate
+
+The SPSmtpGate is a transparent Anti-Spam SMTP Proxy server.  SPSmtpGate 
+support for the Sendmail version 8 Milter (mail filter) protocol.
+
+SPSmtpGate is easy to set up because it requires only minor changes to
+the configuration of your Mail Transfer Agent.
+
+Test example:
+
+bash$ ./fakesmtp -p 2025 -d
+bash$ ./fakemilter -p inet:1111@127.0.0.1 -d
+bash$ ./spsmtpgate -p 1025 -x 7 -o -d
+bash$ ./mailload -s 1 -m 1 -b 1024 -t 5 -p 1025 -F sender -T to -S test
+
+
+Any and all comments are appreciated.
+
+Enjoy!
+
+				-- stephen liu <stephen.nil@gmail.com>
+

@@ -1,0 +1,38 @@
+                             Building
+
+1.libevent
+
+Before building spsmtpgate, libevent must been installed.
+
+You can donwload libevent from its home page:
+
+	http://www.monkey.org/~provos/libevent/
+
+Edit spspserver/Makefile to specify the path of libevent:
+
+	LIBEVENT_INCL = -I<path_to_libevent_include>
+	LIBEVENT_LIB  = -L<path_to_libevent_library> -levent
+
+Edit spsmtpgate/Makefile to specify the path of libevent:
+
+	LIBEVENT_LIB  = -L<path_to_libevent_library> -levent
+
+2.spsmtpgate
+
+To build spsmtpgate, type
+
+$ make
+
+This will build three programs:
+	* spsmtpgate  -- Anti-Spam Smtp Proxy
+	* fakesmtp    -- fake smtp backend
+	* mailload    -- test tools
+
+3.fakemilter
+
+There's also includes a fake milter program. libmilter library
+needs to be installed to build the fakemilter.
+
+$ cd spsmtpgate
+$ make fakemilter
+
