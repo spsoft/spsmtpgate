@@ -1,0 +1,1 @@
+The SPSmtpGate is a transparent Anti-Spam SMTP Proxy server. SPSmtpGate support for the Sendmail version 8 Milter (mail filter) protocol. SPSmtpGate is easy to set up because it requires only minor changes to the configuration of your Mail Transfer Agent.
